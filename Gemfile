@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'tilt'
+gem 'guard-tilt'
+gem 'haml'
+gem 'erb'
