@@ -1,45 +1,64 @@
-context = Struct.new(:path) # default
-=begin Context Object
-context = Class.new do
-  def initialize(path)
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+## Uncomment and set this to only include directories you want to watch
+directories %w(source)
+
+## Uncomment to clear the screen before every task
+# clearing :on
+
+## Guard internally checks for changes in the Guardfile and exits.
+## If you want Guard to automatically start up again, run guard in a
+## shell loop, e.g.:
+##
+##  $ while bundle exec guard; do echo "Restarting Guard..."; done
+##
+## Note: if you are using the `directories` clause above and you are not
+## watching the project directory ('.'), then you will want to move
+## the Guardfile to a watched dir and symlink it back, e.g.
+#
+#  $ mkdir config
+#  $ mv Guardfile config/
+#  $ ln -s config/Guardfile .
+#
+# and, you'll have to watch "config/Guardfile" instead of "Guardfile"
+
+coffeescript_options = {
+  input: 'source/assets/js',
+  output: 'compiled/assets/javascripts',
+  patterns: [%r{^source/assets/javascripts/(.+\.(?:coffee|coffee\.md|litcoffee))$}]
+}
+
+guard 'coffeescript', coffeescript_options do
+  coffeescript_options[:patterns].each { |pattern| watch(pattern) }
+end
+
+# This will concatenate the javascript files specified in :files to public/js/all.js
+#
+# Specifying every single file in the array like %w(a b c) to maintain the loading order is suggested - See https://github.com/makevoid/guard-concat for more info
+#
+guard :concat, type: "js", files: %w(), input_dir: "compiled/assets/js", output: "compiled/assets/js/all"
+
+guard :concat, type: "css", files: %w(), input_dir: "compiled/assets/css", output: "compiled/assets/all"
+
+# Sample guardfile block for Guard::Haml
+# You can use some options to change guard-haml configuration
+# output: 'public'                   set output directory for compiled files
+# input: 'src'                       set input directory with haml files
+# run_at_start: true                 compile files when guard starts
+# notifications: true                send notifictions to Growl/libnotify/Notifu
+# haml_options: { ugly: true }    pass options to the Haml engine
+
+guard :shell, input: 'source/pages', output: 'compiled' do
+  watch(/^.+(\.html\.haml)$/) do |m|
+    `ruby tilt.rb #{m[0]}`
   end
-  # custom behaviour
-end
-=end
-
-locals = Hash.new({}) # default
-=begin Local Variables
-require 'yaml'
-locals, path = {}, 'locals.yml'
-def locals.reload
-  update YAML.load_file(path)
-end
-locals.reload
-=end
-
-guard 'tilt', :context => context, :locals => locals do
-  # watch files with two extnames like index.html.erb
-  watch %r'views/.+\..+\..+'
 end
 
-# Guard::Tilt.root = Dir.getwd # (default: Dir.getwd)
-
-=begin Output Path
-class OuputPath < Guard::Tilt::OutputPath
-
-  BASE = File.expand_path 'source'
-  ROOT = File.expand_path 'compiled'
-
-  # By default Path#sanitize only strips an extname from itself.
-  #
-  # If you want to write the rendered output to another folder you can 
-  # overwrite this method to return another Path object, like this:
-  def sanitize
-    super.sub BASE, ROOT
-  end
-
-  # ... then set the OutputPath class.
-  Guard::Tilt.output_path = self
-
+guard 'livereload' do
+  watch(%r{source/.+\.(erb|haml|slim)$})
+  watch(%r{source/assets/.+\.(css|js|html)})
+  watch(%r{config/locales/.+\.yml})
 end
-=end
+
+guard 'sass', :input => 'source/assets/sass', :output => 'compiled/assets/css'
