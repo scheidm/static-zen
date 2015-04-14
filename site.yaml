@@ -1,0 +1,47 @@
+---
+  title: "Mark Scheid"
+  tagline: "A little about me"
+  author: 
+    name: "Mark Scheid"
+    email: "contact@wellcomposed.net"
+    github: "scheidm"
+  navigation: 
+    - "resume"
+    - "projects"
+  custom_navigation: 
+    - 
+      text: "LinkedIn"
+      url: "http://www.linkedin.com/pub/mark-scheid/90/a26/903"
+    - 
+      text: "GitHub"
+      url: "https://github.com/scheidm"
+  footer_links: 
+    - 
+      pretext: "built with "
+      text: "Ruhoh"
+      url: "http://ruhoh.com"
+      title: "The Definitive Technical Blogging Framework"
+    - 
+      pretext: "and "
+      text: "Bootstrap"
+      url: "http://twitter.github.com/bootstrap/"
+      title: "The powerful CSS framework from Twitter"
+  javascripts: 
+    - 
+      name: "bootstrap.min.js"
+    - 
+      name: "jquery.timeago.js"
+  stylesheets: 
+    - 
+      name: "bootstrap.css"
+    - 
+      name: "dataTables.bootstrap.css"
+    - 
+      name: "google_prettify/prettify.css"
+    - 
+      name: "theme.css"
+    - 
+      name: "local.css"
+  button_color: "#328597"
+  description:
+    default: "A little about me"

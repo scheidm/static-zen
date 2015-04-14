@@ -2,7 +2,12 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
+    %meta{:content => "#{data['description']['default']}", :name => "description"}/
+    %meta{:content => "#{data['author']['name'] }", :name => "author"}/
     %title
-      =title
+      =data['title']
+    -for stylesheet in data['stylesheets']
+      <link rel="stylesheet" href="/assets/stylesheets/#{stylesheet['name']}">
   %body
+    %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :style => "background-color: #{data['button_color']}", :type => "button"}
     =yield
