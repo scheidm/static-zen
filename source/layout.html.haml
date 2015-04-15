@@ -9,5 +9,12 @@
     -for stylesheet in data['stylesheets']
       <link rel="stylesheet" href="/assets/stylesheets/#{stylesheet['name']}">
   %body
-    %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :style => "background-color: #{data['button_color']}", :type => "button"}
+    %p
+      © 2015
+      %a{:href => "mailto:#{data['author']['email']}"}
+        =data['author']['name']
+      -for link in data['footer_links']
+        =link['pretext']
+        %a{:href => link['url'], :target => "_blank", :title => link['title']}
+          = link['text']
     =yield

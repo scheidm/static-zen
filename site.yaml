@@ -6,9 +6,12 @@
     email: "contact@wellcomposed.net"
     github: "scheidm"
   navigation: 
-    - "resume"
-    - "projects"
-  custom_navigation: 
+    - 
+      text: "Projects"
+      url: "projects"
+    - 
+      text:  "Resume"
+      url:  "resume"
     - 
       text: "LinkedIn"
       url: "http://www.linkedin.com/pub/mark-scheid/90/a26/903"
