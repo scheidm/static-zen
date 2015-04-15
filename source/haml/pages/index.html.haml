@@ -1,0 +1,116 @@
+%h1 Greetings visitor!
+
+%p
+  My name is Mark Scheid, a programmer hailing from Northboro, MA. I have a 
+  passion for creation, whether it be a new web application, a piece of fiction, a
+  community event, or the perfect music playlist. My passion lies in the
+  possibilities unlocked by modern web technologies, and I love learning new tools
+  and applying them to solving interesting problems. I created this website to
+  showcase my work, in the hopes of finding like-minded people to collaborate
+  with.
+
+%h1 About me
+%h2
+  %i{:class=>"fa fa-code fa-fw"}
+  Programming Languages
+%div{ :class=>"row-fluid row-xs-height"}
+  %div{ :class=>"col-md-4"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}Ruby
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 80%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}Python
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 70%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}Javascript
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 60%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}Java
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"61", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 50%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}Perl
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 40%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}SQL
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 30%;"}
+    %div{ :class=>"row-fluid"}
+      %h4{ :class=>"lang"}C++
+      %div{ :class=>"progress"}
+        %div{ :class=>"progress-bar", :role=>"progressbar", "aria-valuenow"=>"60", "aria-valuemin"=>"0", "aria-valuemax"=>"100", :style=>"width: 30%;"}
+  %div{ :class=>"col-md-8 lang"}
+    %p{ :class=>"lang"} 
+      Ruby has been my primary production language since April 2013. I love the freedom of expression Ruby gives you, and the quality of the libraries available on Rubygems. I likewise have had a lot of opportunity to use Python, both for all those 1-off command line tools you end up needing, and for academic work.
+    %p{ :class=>"lang"} 
+      Since Fall 2013, the vast majority of my time has been going towards a web application called Quest Till Done. Built on Rails, it's a very visual productivity tool, and so most of our interface has been JavaScript heavy. For the last few months, I've been playing with frameworks as we begin to migrate the whole project to an AJAX approach.
+    %p{ :class=>"lang"}
+      Most of my academic programming in the last few years has been Java, so I remain very comfortable with that language. My first formal code education was in C++, and I remain comfortable enough that I can drop some C extensions into my code when necessary.
+    %p{ :class=>"lang"}
+      This past fall I took a Web Developer position at LiquidPixels. I've since been working hard on developing a new central architecture for their various client facing tools and services. This new project has me up to my elbows in Perl, Javascript, and SQL on a daily basis, and I'm expanding my developers toolbelt daily
+
+%h1
+  %i{:class=>"fa fa-desktop fa-fw"}
+  Tools of the Trade
+%div{ :class=>"row-fluid row-xs-height"}
+  %div{ :class=>"col-sm-push-8 col-sm-4 col-xs-12", :style=>"height:273px"}
+    %img{ :class=>"img-lrg", :src=>"/assets/media/Vim_logo.png"}
+  %div{ :class=>"col-sm-pull-4 col-sm-8 col-xs-12"}
+    %p 
+      While I was always attracted to Vim for the speed of expression and
+      wealth of plugins, the proliferation of free or inexpensive server
+      options has made this command line tool even more valuable. It is the standard
+      by which I judge other programs in my dev environment. Once I found
+      Vundle and could host my whole setup on a GitHub repository, bridging my
+      configuration between computers has been a breeze
+    %p
+      I still remain loyal to Bash, and Tmux has made managing multiple
+      sessions so much simpler and more powerful than the old days with
+      Screen. Vim-like bindings make the tool instantly comfortable, and make
+      quick work of checking on server errors in my latest web-app.
+%h1
+  %i{ :class=>"fa fa-graduation-cap fa-fw"}
+  Education
+%div{ :class=>"row-fluid row-xs-height"}
+  %div{ :class=>"col-md-4"}
+    %img{ :class=>"img-lrg",  :src=>"/assets/media/Drexel.png"}
+  %div{ :class=>"col-md-8"}
+    %p
+      I've completed 2 degrees at Drexel University, giving me a rather
+      unique perspective on the world. My first degree was in International
+      Area Studies, which gave me a solid foundation in Mandarin Chinese,
+      Eastern philosophy, and Anthropology. My second degree in Computer
+      Science laid the foundation for my professional career, and earned me
+      domain knowledge of Object Oriented design patterns, data structures
+      and algorithms, and Unix systems.
+%h1
+  %i{ :class=>"fa fa-comment fa-fw"}
+  Languages
+%div{ :class=>"row-fluid row-xs-height"}
+  %div{ :class=>"col-sm-4 col-xs-12 multilingual"}
+    %p English (Native)
+  %div{ :class=>"col-sm-4 col-xs-12 multilingual"}
+    %p Mandarin Chinese(Intermediate)
+  %div{ :class=>"col-sm-4 col-xs-12 multilingual"}
+    %p Spanish (Beginner)
+%h1
+  %i{:class=>"fa fa-wrench fa-fw"} 
+  Frameworks
+%a{ :href=>"http://rubyonrails.org/"}
+  %img{ :class=>"frameworks", :src=>"/assets/media/Ruby_on_Rails.svg.png", :alt=>"Ruby on Rails"}
+%a{ :href=>"https://www.vagrantup.com/"}
+  %img{ :class=>"frameworks", :alt=>"Vagrant", :src=>"/assets/media/vagrant-logo.png"}
+%a{ :href=>"http://cukes.info/"}
+  %img{ :class=>"frameworks", :alt=>"Cucumber BDD", :src=>"/assets/media/cucumber_logo.png"}
+%a{ :href=>"http://bootstrapdocs.com/v3.2.0/docs/"}
+  %img{ :class=>"frameworks", :alt=>"Bootstrap", :src=>"/assets/media/Twitter_Bootstrap_logo.svg.png"}
+%a{ :href=>"https://angularjs.org/"}
+  %img{ :class=>"frameworks", :alt=>"AngularJS", :src=>"/assets/media/AngularJS.png"}
+%a{ :href=>"https://www.getchef.com/"}
+  %img{ :class=>"frameworks", :alt=>"Opscode Chef", :src=>"/assets/media/OC_Chef_Logo.png"}
+%a{ :href=>"http://backbonejs.org/"}
+  %img{ :class=>"frameworks", :alt=>"BackboneJS", :src=>"/assets/media/backbone.png"}

@@ -1,0 +1,19 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "#{data['description']['default']}", :name => "description"}/
+    %meta{:content => "#{data['author']['name'] }", :name => "author"}/
+    %title
+      =data['title']
+    -for stylesheet in data['stylesheets']
+      <link rel="stylesheet" href="/assets/stylesheets/#{stylesheet['name']}">
+  %body
+    %span.btn-group.hidden-lg.hidden-md.hidden-sm
+      %button.btn.btn-default.dropdown-toggle{ :type => "button"}
+        %i.fa.fa-bars{:style => "margins:5px"}
+      %ul.dropdown-menu{:role => "menu"}
+        -for link in navigation
+          %li
+            %a{:href => link.url}#{link.text}
+    =yield

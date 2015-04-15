@@ -49,7 +49,7 @@ guard :concat, type: "css", files: %w(), input_dir: "compiled/assets/css", outpu
 # notifications: true                send notifictions to Growl/libnotify/Notifu
 # haml_options: { ugly: true }    pass options to the Haml engine
 
-guard :shell, input: 'source/pages', output: 'compiled' do
+guard :shell, input: 'source/haml/pages', output: 'compiled' do
   watch(/^.+(\.html\.haml)$/) do |m|
     `ruby tilt.rb #{m[0]}`
   end
