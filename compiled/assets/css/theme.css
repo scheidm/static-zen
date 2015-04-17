@@ -2,16 +2,13 @@ body {
   color: #000; }
 
 a {
-  color: #328597;
-  text-decoration: underline; }
+  color: #60CADA; }
 
 a:focus {
-  color: #328597;
-  text-decoration: underline; }
+  color: #60CADA; }
 
 a:hover {
-  color: #60CADA;
-  text-decoration: underline; }
+  color: #60CADA; }
 
 @media (min-width: 768px) {
   .text-right-responsive {
@@ -67,8 +64,8 @@ img {
   color: #60CADA;
   font-size: 24px;
   font-weight: 300;
-  text-decoration: none;
-  /*text-transform: capitalize */ }
+  /*text-transform: capitalize*/
+   * text-decoration: none */ }
 
 nav#main-nav {
   background-color: #011C17; }

@@ -61,4 +61,4 @@ guard 'livereload' do
   watch(%r{config/locales/.+\.yml})
 end
 
-guard 'sass', :input => 'source/assets/sass', :output => 'compiled/assets/css'
+guard 'sass', :input => 'source/sass', :output => 'compiled/assets/stylesheets'

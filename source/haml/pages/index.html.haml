@@ -46,51 +46,57 @@
   %div.col-md-8.lang 
     %p
       Ruby has been my primary production language since April 2013. I love the freedom of expression Ruby gives you, and the quality of the libraries available on 
-      %a{ :href => 'https://rubygems.org/'} Rubygems.
+      %a(href='https://rubygems.org/') Rubygems.
       I likewise have had a lot of opportunity to use Python, both for all those 1-off command line tools you end up needing, and for academic work.
     %p
       Since September 2013, the vast majority of my time has been going towards a web application called 
-      %a{ :href => 'https://github.com/scheidm/quest-till-done'}Quest Till Done.
+      %a(href = 'https://github.com/scheidm/quest-till-done')Quest Till Done.
       Built on Rails, it's a very visual productivity tool, and so most of our interface has been JavaScript heavy. For the last few months, I've been experimenting with Javascript frameworks as we begin to migrate the whole project to an AJAX approach.
     %p
       Most of my academic programming in the last few years has been Java, so I remain very comfortable with that language. My first formal code education was in C++, and I remain comfortable enough that I can drop some C extensions into my code when necessary.
     %p
       This past fall I took a Web Developer position at 
-      %a{:href=>'http://www.liquidpixels.com/'}LiquidPixels.
+      %a(href='http://www.liquidpixels.com/')LiquidPixels.
       I've since been working hard on developing a new central architecture for their various client facing tools and services. This new project has me up to my elbows in Perl, Javascript, and SQL on a daily basis, and I'm expanding my developers toolbelt daily
+    %p
+      My next target will likely be
+      %a( href='http://clojure.org/' ) Clojure
+      as I've been meaning to do some serious functional programming to provide a counterpoint to a formal education that largely focused on the virtues of the Object-Oriented paradigm.
+      I'm still looking for the right project to really leverage the multi-threaded performance benefits of the language before diving in, and in the meantime I have plenty of other
+      %a( href='projects') projects on my plate.
 
 %h1
   %i.fa.fa-desktop.fa-fw 
   Tools of the Trade
 %div.row-fluid.row-xs-height 
   %div.col-sm-push-8.col-sm-4.col-xs-12{ :style=>"height:273px"}
-    %a{ :href =>'http://vimdoc.sourceforge.net/' }
+    %a(href ='http://vimdoc.sourceforge.net/' )
       %img.img-lrg{ :src=>"/assets/media/Vim_logo.png"}
   %div.col-sm-pull-4.col-sm-8.col-xs-12 
     %p 
       While I was always attracted to Vim for the speed of expression and wealth of plugins, the proliferation of free or inexpensive server
       options has made this command line tool even more valuable. It is the standard by which I judge other programs in my dev environment. Once I found
-      %a{ :href => 'https://github.com/gmarik/Vundle.vim'}Vundle 
+      %a(href = 'https://github.com/gmarik/Vundle.vim')Vundle 
       and could host my whole setup on a GitHub repository, bridging my configuration between computers has been a breeze
     %p
       I still remain loyal to Bash, and 
-      %a{ :href => 'https://github.com/tmuxinator/tmuxinator'}Tmux
+      %a(href = 'https://github.com/tmuxinator/tmuxinator')Tmux
       has made managing multiple sessions so much simpler and more powerful than the old days with
       Screen. Vim-like bindings make the tool instantly comfortable, and make quick work of checking on server errors in my latest web-app.
     %p
       As I often found myself working in Windows environments, I have become passionate about virtualization tools. Since 2013, I have used 
-      %a{ :href => 'https://www.vagrantup.com/'}Vagrant boxes 
+      %a(href = 'https://www.vagrantup.com/')Vagrant boxes 
       with Virtual Box and VMware Fusion to run a customized Ubuntu environment from within Mac and Windows machines. I've found that modern computers have plenty of overhead
       to support multiple simultaneous virtual machines, and the having consistency of image between development and deployment helps alleviate some common developer headaches.
       It is an exciting time in computing, and in the coming year I'm looking forward to taking the next step and migrating my tools to take advantage of tools like
-      %a{ :href => 'https://www.docker.com/'} Docker
+      %a(href = 'https://www.docker.com/') Docker
       to eke further performance out of my virtualized environments.
 %h1
   %i.fa.fa-graduation-cap.fa-fw 
   Education
 %div.row-fluid.row-xs-height 
   %div.col-md-4 
-    %a{ :href => 'http://www.drexel.edu/' }
+    %a(href = 'http://www.drexel.edu/' )
       %img.img-lrg{  :src=>"/assets/media/Drexel.png"}
   %div.col-md-8 
     %p
@@ -106,19 +112,19 @@
   Languages
 %div.row-fluid
   %div.col-sm-4.col-xs-12.multilingual 
-    %div.col-sm-5.col-xs-12
+    %div.col-sm-3.col-xs-12
       %img.img-sm{  :src=>"/assets/media/flag_uk.png"}
-    %div.col-sm-7.col-xs-12
+    %div.col-sm-9.col-xs-12
       %h3.flag English (Native)
   %div.col-sm-4.col-xs-12.multilingual 
-    %div.col-sm-5.col-xs-12
+    %div.col-sm-3.col-xs-12
       %img.img-sm{  :src=>"/assets/media/flag_china.png"}
-    %div.col-sm-7.col-xs-12
+    %div.col-sm-9.col-xs-12
       %h3.flag Mandarin Chinese (Intermediate)
   %div.col-sm-4.col-xs-12.multilingual 
-    %div.col-sm-5.col-xs-12
+    %div.col-sm-3.col-xs-12
       %img.img-sm{  :src=>"/assets/media/flag_spain.png"}
-    %div.col-sm-7.col-xs-12
+    %div.col-sm-9.col-xs-12
       %h3.flag Spanish (Beginner)
 %div.row-fluid
   %p
@@ -127,17 +133,17 @@
 %h1
   %i.fa.fa-wrench.fa-fw  
   Frameworks
-%a{ :href=>"http://rubyonrails.org/"}
+%a(href="http://rubyonrails.org/")
   %img.frameworks{ :src=>"/assets/media/Ruby_on_Rails.svg.png", :alt=>"Ruby on Rails"}
-%a{ :href=>"https://www.vagrantup.com/"}
+%a(href="https://www.vagrantup.com/")
   %img.frameworks{ :alt=>"Vagrant", :src=>"/assets/media/vagrant-logo.png"}
-%a{ :href=>"http://cukes.info/"}
+%a(href="http://cukes.info/")
   %img.frameworks{ :alt=>"Cucumber BDD", :src=>"/assets/media/cucumber_logo.png"}
-%a{ :href=>"http://bootstrapdocs.com/v3.2.0/docs/"}
-  %img.frameworks{ :alt=>"Bootstrap", :src=>"/assets/media/Twitter_Bootstrap_logo.svg.png"}
-%a{ :href=>"https://angularjs.org/"}
-  %img.frameworks{ :alt=>"AngularJS", :src=>"/assets/media/AngularJS.png"}
-%a{ :href=>"https://www.getchef.com/"}
+%a(href="https://www.getchef.com/")
   %img.frameworks{ :alt=>"Opscode Chef", :src=>"/assets/media/OC_Chef_Logo.png"}
-%a{ :href=>"http://backbonejs.org/"}
+%a(href="https://angularjs.org/")
+  %img.frameworks{ :alt=>"AngularJS", :src=>"/assets/media/AngularJS.png"}
+%a(href="http://backbonejs.org/")
   %img.frameworks{ :alt=>"BackboneJS", :src=>"/assets/media/backbone.png"}
+%a(href="http://bootstrapdocs.com/v3.2.0/docs/")
+  %img.frameworks{ :alt=>"Bootstrap", :src=>"/assets/media/Twitter_Bootstrap_logo.svg.png"}

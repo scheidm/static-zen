@@ -1,14 +1,24 @@
+$blue : #60CADA
+$drkblue : #3C686B
+$blue-shd : #328597
+$drkblue-shd : #011C17
+$grey : #BABABA
+$colorbase: #60CADA
+$color: #3C686B
 body 
   color: #000
 
 a 
-  color: #328597
+  color: $blue-shd
+  text-decoration: underline
 
 a:focus 
-  color: #328597
+  color: $blue-shd
+  text-decoration: underline
 
 a:hover 
   color: #60CADA
+  text-decoration: underline
 
 
 @media (min-width:768px)
@@ -65,8 +75,8 @@ img
   color: #60CADA
   font-size: 24px
   font-weight: 300
+  text-decoration: none
   /*text-transform: capitalize*/
-    text-decoration: none
 
 nav#main-nav
   background-color: #011C17
