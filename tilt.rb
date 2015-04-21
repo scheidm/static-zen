@@ -16,8 +16,12 @@ end
 s=ARGV[0]
 filename=s.split('.')[0]
 structure=filename.split('/')
-changed=structure[-1]
-print s
+if structure[2]=='layouts' then
+  print 'layout updated'
+  return;
+end
+changed=structure[3..-1].join('/')
+print changed
  
 template = Tilt::HamlTemplate.new("source/haml/layouts/default.html.haml")
 #template = Tilt::HamlTemplate.new("source/layout.html.haml")

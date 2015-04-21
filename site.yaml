@@ -21,9 +21,9 @@
   footer_links: 
     - 
       pretext: "built with "
-      text: "Ruhoh"
-      url: "http://ruhoh.com"
-      title: "The Definitive Technical Blogging Framework"
+      text: "Static Zen"
+      url: "http://github.com/scheidm/static-zen"
+      title: "The minimalist static page engine"
     - 
       pretext: "and "
       text: "Bootstrap"
