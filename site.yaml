@@ -8,10 +8,10 @@
   navigation: 
     - 
       text: "Projects"
-      url: "projects"
+      url: "/projects"
     - 
       text:  "Resume"
-      url:  "resume"
+      url:  "/resume"
     - 
       text: "LinkedIn"
       url: "http://www.linkedin.com/pub/mark-scheid/90/a26/903"
