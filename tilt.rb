@@ -21,13 +21,12 @@ end
 def update(s)
   structure=split(s)
   changed=structure[3..-1].join('/')
-  template = Tilt::HamlTemplate.new("source/haml/layouts/default.html.haml")
-  #template = Tilt::HamlTemplate.new("source/layout.html.haml")
   site = YAML::load_file('site.yaml')
   context = to_ostruct(site)
-  File.open( "compiled/#{changed}.html", "w") do |file|
+  template = Tilt::HamlTemplate.new(context.template.dir+context.template.name)
+  File.open( context.output_dir+changed+".html", "w") do |file|
       file.write template.render(context) {
-          Tilt::HamlTemplate.new("#{s}").render(context)
+          Tilt::HamlTemplate.new( s ).render(context)
       }
   end
 end
@@ -35,11 +34,11 @@ s=ARGV[0]
 structure=split(s)
 if structure[2]=='layouts' then
   print 'layout updated'
-  updates=Dir.glob('source/haml/pages/**/*').select{ |e| File.file? e }
+  updates=Dir.glob(context.source_dir+'pages/**/*').select{ |e| File.file? e }
   updates.each{ |page|
     print "update #{page}\n"
     update(page)
   }
 else 
-  update(changed)
+  update(s)
 end

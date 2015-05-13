@@ -5,6 +5,12 @@
     name: "Mark Scheid"
     email: "contact@wellcomposed.net"
     github: "scheidm"
+  template:
+    dir: "source/haml/layouts/"
+    name: "default.html.haml"
+  source_dir: "source/haml/"
+  output_dir: "compiled/"
+
   navigation: 
     - 
       text: "Projects"
