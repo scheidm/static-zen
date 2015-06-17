@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'tilt'
 gem 'guard-livereload'
+gem 'guard-rack'
 gem 'guard-shell'
 gem 'guard-sass'
 gem 'guard-coffeescript'

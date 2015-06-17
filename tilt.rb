@@ -18,11 +18,15 @@ def split(filearg)
   return filename.split('/')
 end
 
+def config()
+  site = YAML::load_file('site.yaml')
+  return to_ostruct(site)
+end
+
 def update(s)
   structure=split(s)
   changed=structure[3..-1].join('/')
-  site = YAML::load_file('site.yaml')
-  context = to_ostruct(site)
+  context = config()
   template = Tilt::HamlTemplate.new(context.template.dir+context.template.name)
   File.open( context.output_dir+changed+".html", "w") do |file|
       file.write template.render(context) {
@@ -31,6 +35,8 @@ def update(s)
   end
 end
 s=ARGV[0]
+context = config()
+print s.sub(context.source_dir,'')
 structure=split(s)
 if structure[2]=='layouts' then
   print 'layout updated'

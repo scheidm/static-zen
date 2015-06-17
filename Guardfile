@@ -60,5 +60,9 @@ guard 'livereload' do
   watch(%r{source/assets/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
 end
+guard 'rack', :port => 9292 do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib|app)/.*})
+end
 
 guard 'sass', :input => 'source/sass', :output => 'compiled/assets/stylesheets'
